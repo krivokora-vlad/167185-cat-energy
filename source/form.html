@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
       <a class="logo  page-header__logo" href="index.html">
         <img class="logo__img">
-        <span class="logo__title"><b>CAT</b> ENERGY</span>
+        <span class="logo__title"><b class="logo__cat-bold">CAT</b> ENERGY</span>
       </a>
       <button class="page-header__btn-menu  page-header__btn-menu--close" type="button">Меню</button>
       <ul class="main-menu">
@@ -16,12 +17,6 @@
         <li class="main-menu__item"><a href="catalog.html">Каталог продукции</a></li>
         <li class="main-menu__item"><a>Подбор программы</a></li>
       </ul>
-      <div class="promo">
-        <h1 class="promo__title">Функциональное питание для котов</h1>
-        <span class="promo__slogan">Занялся собой? Займись котом!</span>
-        <img class="promo__img" src="http://placehold.it/280x270" width="280" height="270" alt="Cat Energy с курицей">
-        <a class="promo__btn  btn" href="form.html">Подобрать программу</a>
-      </div>
     </header>
     <main class="page-main">
       <form action="https://echo.htmlacademy.ru" method="POST" class="program-select">
@@ -78,7 +73,7 @@
           </label>
         </fieldset>
         <button class="btn program-select__form-submit" type="submit">Отправить заявку</button>
-        <p>*&mdash;Обязательные поля</p>
+        <p>* &mdash; Обязательные поля</p>
       </form>
       <section class="contacts">
         <b class="contacts__title">Приглашаем к сотрудничеству дилеров!</b>
@@ -90,7 +85,7 @@
     </main>
     <footer class="page-footer">
       <a class="logo  page-footer__logo" href="index.html">
-        <span class="logo__title"><b>CAT</b> ENERGY</span>
+        <span class="logo__title"><b class="logo__cat-bold">CAT</b> ENERGY</span>
       </a>
       <ul class="social  page-footer__social">
         <li class="social__item">
@@ -104,8 +99,8 @@
         </li>
       </ul>
       <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">
-        <span>HTML Academy</span>
-        <img src="http://placehold.it/27x34" width="27" height="34" alt="HTML Academy">
+        <span class="copyright__name">HTML Academy</span>
+        <img class="copyright__icon" src="http://placehold.it/27x34" width="27" height="34" alt="HTML Academy">
       </a>
     </footer>
   </body>
