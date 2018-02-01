@@ -1,4 +1,10 @@
 .how-it-works {
+  @media @desktop-widths {
+    padding-bottom: 210px;
+  }
+  .how-it-works__wrapper {
+    .wrapper;
+  }
   .how-it-works__title {
     font-family: @font;
     font-weight: 400;
@@ -9,6 +15,13 @@
   }
   .how-it-works__list {
     .list-reset;
+    @media @tablet-widths {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @media @desktop-widths {
+      justify-content: space-between;
+    }
   }
   .how-it-works__item {
     font-family: 'Arial', sans-serif;
@@ -16,5 +29,11 @@
     font-size: 14px;
     line-height: 18px;
     color: @main-color-text;
+    @media @tablet-widths {
+      width: 324px;
+    }
+    @media @desktop-widths {
+      width: 245px;
+    }
   }
 }

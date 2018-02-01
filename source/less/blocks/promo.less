@@ -1,10 +1,39 @@
 .promo {
+  height: 480px;
+  @media @tablet-widths {
+    height: auto;
+  }
+  @media @desktop-widths {
+    width: 420px;
+  }
+  .promo__wrapper {
+    .wrapper;
+    padding-top: 25px;
+    height: 305px;
+    background: @main-color-green;
+    @media @tablet-widths {
+      padding-top: 0;
+      background: white;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+    }
+  }
   .promo__title {
+    margin-top: 0;
     font-family: @font;
     font-weight: 400;
     font-size: 36px;
     line-height: 36px;
     color: @main-color-white;
+    text-align: center;
+    @media @tablet-widths {
+      text-align: left;
+      color: @main-color-black;
+    }
+    @media @desktop-widths {
+      margin-top: 80px;
+    }
   }
   .promo__slogan {
     font-family: @font;
@@ -12,11 +41,33 @@
     font-size: 14px;
     line-height: 14px;
     color: @main-color-white;
+    text-align: center;
+    display: block;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    @media @tablet-widths {
+      margin-bottom: 0;
+      text-align: left;
+      display: block;
+      color: @main-color-black;
+    }
   }
   .promo__img {
-
+    @media @tablet-widths {
+      order: 10;
+    }
+    @media @desktop-widths {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
   .promo__btn {
-
+    margin-top: 54px;
+    @media @tablet-widths {
+      position: relative;
+      top: 60px;
+      margin: 0;
+    }
   }
 }

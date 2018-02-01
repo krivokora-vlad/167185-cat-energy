@@ -1,7 +1,12 @@
 .main-menu {
   .list-reset;
+  @media @tablet-widths {
+    display: flex;
+  }
   .main-menu__item {
     line-height: 65px;
+    position: relative;
+    z-index: 4;
   }
   .main-menu__link {
     font-family: @font;
@@ -11,5 +16,10 @@
     color: @main-color-black;
     text-decoration: none;
     text-transform: uppercase;
+    &--white {
+      @media @desktop-widths {
+        color: @main-color-white;
+      }
+    }
   }
 }

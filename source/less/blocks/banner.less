@@ -1,5 +1,26 @@
 .banner {
   text-decoration: none;
+  display: block;
+  @media @desktop-widths {
+    width: 245px;
+    height: 290px;
+  }
+  .banner__wrapper {
+    .wrapper;
+    min-width: auto;
+    width: 280px;
+    height: 289px;
+    background: @main-color-green;
+    @media @tablet-widths {
+      min-width: auto;
+      width: 708px;
+    }
+    @media @desktop-widths {
+      min-width: auto;
+      width: 245px;
+      height: 289px;
+    }
+  }
   .banner__icon {
 
   }
