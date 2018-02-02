@@ -1,11 +1,13 @@
 .program-select {
+  .program-select__wrapper {
+    .wrapper;
+  }
   .program-select__title {
     font-family: @font;
     font-weight: 400;
     font-size: 36px;
     line-height: 60px;
     color: @main-color-black;
-    text-transform: uppercase;
   }
   .program-select__description {
     font-family: @font;
@@ -15,12 +17,32 @@
     color: @main-color-black;
     text-transform: uppercase;
   }
+  .program-select__form-groups {
+    @media @desktop-widths {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
   .program-select__form-group {
     display: flex;
     flex-direction: column;
 
     &--underline {
 
+    }
+
+    &--half-width {
+      @media @desktop-widths {
+        width: 570px;
+      }
+    }
+    &--contacts {
+      @media @desktop-widths {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
     }
   }
   .program-select__label {
@@ -30,20 +52,40 @@
     line-height: 18px;
     color: @main-color-black;
     text-transform: uppercase;
+    &--checkbox {
+      @media @tablet-widths {
+        width: 283px;
+      }
+    }
+    &--contact {
+      @media @desktop-widths {
+        width: 570px;
+      }
+    }
   }
   .program-select__input {
 
   }
-  .program-select__form-legend {
+  .program-select__title-group {
     font-family: @font;
     font-weight: 400;
     font-size: 24px;
     line-height: 24px;
     color: @main-color-black;
-    text-transform: uppercase;
+    width: 100%;
+  }
+  .program-select__group-checkbox {
+    @media @tablet-widths {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
   }
   .program-select__form-submit {
     font-size: 16px;
+    @media @tablet-widths {
+      display: inline-block;
+    }
   }
   textarea {
     font-family: @font;
@@ -54,11 +96,15 @@
     text-transform: uppercase;
   }
 
-  p {
+  .program-select__required-fields {
     font-family: 'Arial', sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
     color: @main-color-text;
+    @media @tablet-widths {
+      margin-left: 60px;
+      display: inline-block;
+    }
   }
 }

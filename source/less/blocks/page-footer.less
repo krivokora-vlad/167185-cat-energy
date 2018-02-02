@@ -1,5 +1,14 @@
 .page-footer {
   background: @main-color-grey;
+  .page-footer__wrapper {
+    .wrapper;
+    @media @tablet-widths {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  }
   .page-footer__logo {
 
   }

@@ -1,5 +1,18 @@
 .live-example {
   background: @main-color-grey;
+  @media @desktop-widths {
+    position: relative;
+  }
+  .live-example__wrapper {
+    .wrapper;
+    @media @desktop-widths {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-top: 50px;
+      padding-bottom: 70px;
+    }
+  }
   .live-example__title {
     font-family: @font;
     font-weight: 400;
@@ -7,6 +20,23 @@
     line-height: 60px;
     color: @main-color-black;
     text-transform: uppercase;
+    @media @desktop-widths {
+      display: block;
+      max-width: 100%;
+      position: absolute;
+      top: -140px;
+    }
+  }
+  .live-example__info {
+    @media @tablet-widths {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    @media @desktop-widths {
+      width: 440px;
+      justify-content: flex-start;
+    }
   }
   .live-example__description {
     font-family: 'Arial', sans-serif;
@@ -14,6 +44,9 @@
     font-size: 14px;
     line-height: 18px;
     color: @main-color-text;
+    @media @tablet-widths {
+      width: 100%;
+    }
   }
   .live-example__table {
 
@@ -22,6 +55,9 @@
 
   }
   .live-example__col {
+    @media @tablet-widths {
+      width: 162px;
+    }
     &--value {
       font-family: @font;
       font-weight: 400;
@@ -45,9 +81,26 @@
     line-height: 20px;
     color: @main-color-black;
     text-transform: uppercase;
+    @media @tablet-widths {
+      width: 180px;
+    }
+    @media @desktop-widths {
+      width: auto;
+    }
+  }
+  .live-example__costs {
+    @media @desktop-widths {
+      margin-left: 30px;
+    }
+  }
+  .live-example__img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
   }
   .live-example__wrapper-toggle {
-
+    display: flex;
+    justify-content: center;
   }
   .live-example__toggle-label {
     font-family: @font;

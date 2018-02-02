@@ -1,9 +1,39 @@
 .page-header {
+  &--light {
+    @media @desktop-widths {
+      height: 696px;
+    }
+  }
+  .page-header__wrapper {
+    .wrapper;
+    @media @tablet-widths {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &--green-cats {
+      @media @desktop-widths {
+        position: relative;
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          display: block;
+          width: 770px;
+          height: 696px;
+          background: @main-color-green;
+        }
+      }
+    }
+  }
   .page-header__logo {
 
   }
   .page-header__btn-menu {
-
+    @media @tablet-widths {
+      display: none;
+    }
     &--close {
 
     }
