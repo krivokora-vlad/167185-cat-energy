@@ -1,6 +1,7 @@
 .catalog {
   .catalog__wrapper {
     .wrapper;
+    padding-bottom: 67px;
   }
   .catalog__title {
     font-family: @font;
@@ -9,7 +10,8 @@
     line-height: 60px;
     color: @main-color-black;
     @media @tablet-widths {
-      margin-bottom: 100px;
+      margin-bottom: 20px;
+      font-size: 60px;
     }
   }
   .catalog__list {
@@ -20,38 +22,93 @@
     }
   }
   .catalog__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 210px;
+    align-items: flex-start;
+    border-top: #ededed 1px solid;
+    padding: 25px 0;
     @media @tablet-widths {
-      margin-bottom: 140px;
+      display: block;
+      min-height: 431px;
+      margin-top: 140px;
       width: 324px;
       background: @main-color-grey;
-      padding: 0 38px 40px 38px;
+      padding: 160px 38px 40px 38px;
+      position: relative;
     }
     @media @desktop-widths {
       width: 245px;
     }
+    &--show-more {
+      border-left: none;
+      border-right: none;
+      padding-top: 80px;
+      position: relative;
+      display: block;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: url('../img/icon-plus-mobile.svg') no-repeat center;
+        display: block;
+        width: 30px;
+        height: 30px;
+      }
+      @media @tablet-widths {
+        background: @main-color-white;
+        padding-top: 160px;
+        border: 1px solid #e6e6e6;
+        &::before {
+          top: 55px;
+        }
+      }
+    }
   }
-  .catalog__item-link {
-    font-family: @font;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    color: @main-color-black;
-    text-transform: uppercase;
-    text-decoration: none;
+  .catalog__wrapper-description {
+    width: 50%;
+    @media @tablet-widths {
+      width: 100%;
+    }
   }
-  .catalog__img {
+  .catalog__img-link {
     @media @tablet-widths {
       display: block;
       margin: 0 auto;
-      position: relative;
+      position: absolute;
       top: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  .catalog__name-link {
+    text-decoration: none;
+    color: @main-color-black;
+  }
+  .catalog__img {
+    margin: auto;
+    @media @tablet-widths {
+
     }
   }
   .catalog__name-product {
-
-  }
-  .catalog__item-link {
-
+    width: 75px;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: @font;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 0;
+    @media @tablet-widths {
+      margin: 0 auto;
+      margin-bottom: 19px;
+      width: 130px;
+      font-size: 20px;
+      text-align: center;
+    }
   }
   .catalog__table {
     font-family: 'Arial', sans-serif;
@@ -59,17 +116,31 @@
     font-size: 12px;
     line-height: 16px;
     color: @main-color-text;
+    border-collapse: collapse;
+    width: 100%;
+    @media @tablet-widths {
+      font-size: 16px;
+    }
   }
   .catalog__table-row {
 
   }
   .catalog__table-col {
-
+    &:last-child {
+      text-align: right;
+    }
+    @media @tablet-widths {
+      width: 50%;
+      line-height: 30px;
+      border-bottom: #cdcdcd 1px solid;
+    }
   }
   .catalog__btn-order {
     font-size: 16px;
+    margin-top: 12px;
     @media @tablet-widths {
       width: 250px;
+      margin-top: 32px;
     }
     @media @desktop-widths {
       width: 168px;
@@ -82,6 +153,16 @@
     line-height: 20px;
     color: @main-color-black;
     text-transform: uppercase;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 8px;
+    @media @tablet-widths {
+      font-size: 20px;
+      width: 140px;
+      margin: 0 auto;
+      margin-bottom: 24px;
+    }
   }
   .catalog__text-show-more {
     font-family: 'Arial', sans-serif;
@@ -89,12 +170,22 @@
     font-size: 12px;
     line-height: 16px;
     color: @main-color-text;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    @media @tablet-widths {
+      font-size: 16px;
+      width: 170px;
+      line-height: 18px;
+      margin-bottom: 90px;
+    }
   }
   .catalog__btn-show-more {
     display: block;
     width: 280px;
     background: @main-color-grey;
     border: none;
+    margin-top: 20px;
 
     font-family: @font;
     font-weight: 400;
@@ -104,6 +195,16 @@
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
+    &:hover {
+      background: #ebebeb;
+    }
+    &:active {
+      color: rgba(68, 68, 68, 0.3);
+    }
+    @media @tablet-widths {
+      margin: 0;
+      width: 100%;
+    }
     @media @desktop-widths {
       width: 168px;
     }

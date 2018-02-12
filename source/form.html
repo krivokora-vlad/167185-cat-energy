@@ -10,14 +10,14 @@
     <header class="page-header">
       <div class="page-header__wrapper">
         <a class="logo  page-header__logo" href="index.html">
-          <img class="logo__img">
-          <span class="logo__title"><b class="logo__cat-bold">CAT</b> ENERGY</span>
+          <img class="logo__img  logo__img--icon" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy">
+          <img class="logo__img  logo__img--text" src="img/logo-mobile-header.svg" width="101" height="18" alt="Cat Energy">
         </a>
-        <button class="page-header__btn-menu  page-header__btn-menu--close" type="button">Меню</button>
+        <button class="page-header__btn-menu  page-header__btn-menu--no-js" type="button">Меню</button>
         <ul class="main-menu">
           <li class="main-menu__item"><a class="main-menu__link" href="index.html">Главная</a></li>
           <li class="main-menu__item"><a class="main-menu__link" href="catalog.html">Каталог продукции</a></li>
-          <li class="main-menu__item"><a class="main-menu__link">Подбор программы</a></li>
+          <li class="main-menu__item"><a class="main-menu__link  main-menu__link--active">Подбор программы</a></li>
         </ul>
       </div>
     </header>
@@ -26,69 +26,65 @@
         <div class="program-select__wrapper">
           <h1 class="program-select__title">Подбор программы</h1>
           <p class="program-select__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
-          <div class="program-select__form-groups">
-            <div class="program-select__form-group  program-select__form-group--underline  program-select__form-group--half-width">
-              <label for="name" class="program-select__label">Имя:*
-                <input type="text" id="name" class="program-select__input">
-              </label>
-              <label for="weight" class="program-select__label">Вес (КГ):*
-                <input type="text" id="weight" class="program-select__input">
-              </label>
-              <label for="age" class="program-select__label">Возраст (Лет):
-                <input type="text" id="age" class="program-select__input">
-              </label>
-            </div>
-            <div class="program-select__form-group  program-select__form-group--underline  program-select__form-group--half-width">
-              <label for="losing-weight" class="program-select__label">
-                <input type="radio" name="weight-options" id="losing-weight" class="program-select__input"> Похудение
-              </label>
-              <label for="weight-gain" class="program-select__label">
-                <input type="radio" name="weight-options" id="weight-gain" class="program-select__input"> Набор массы
-              </label>
-              <label for="dont-known" class="program-select__label">
-                <input type="radio" name="weight-options" id="dont-known" class="program-select__input"> Не знаю (Нужен ваш совет)
-              </label>
-            </div>
+        </div>
+        <div class="program-select__form-groups">
+          <div class="program-select__form-group  program-select__form-group--desc-and-target">
+            <label for="name" class="program-select__label  program-select__label--input-text">Имя:*
+              <input type="text" id="name" class="program-select__input-text">
+            </label>
+            <label for="weight" class="program-select__label  program-select__label--input-text">Вес&nbsp;(КГ):*
+              <input type="text" id="weight" class="program-select__input-text">
+            </label>
+            <label for="age" class="program-select__label  program-select__label--input-text">Возраст&nbsp;(Лет):
+              <input type="text" id="age" class="program-select__input-text">
+            </label>
           </div>
+          <div class="program-select__form-group  program-select__form-group--underline  program-select__form-group--desc-and-target">
+            <input type="radio" name="weight-options" id="losing-weight" class="program-select__radio" disabled>
+            <label for="losing-weight" class="program-select__label  program-select__label--radio"> Похудение</label>
+            <input type="radio" name="weight-options" id="weight-gain" class="program-select__radio">
+            <label for="weight-gain" class="program-select__label  program-select__label--radio"> Набор массы</label>
+            <input type="radio" name="weight-options" id="dont-known" class="program-select__radio">
+            <label for="dont-known" class="program-select__label  program-select__label--radio"> Не знаю (Нужен ваш совет)</label>
+          </div>
+        </div>
+        <div class="program-select__wrapper">
           <div class="program-select__form-group  program-select__form-group--contacts">
             <h2 class="program-select__title-group">Контактные данные (владельца кота)</h2>
-            <label for="email" class="program-select__label  program-select__label--contact">E-mail:*
-              <input type="email" id="email" class="program-select__input">
+            <label for="email" class="program-select__label  program-select__label--contact">E&#8209;mail:*
+              <input type="email" id="email" class="program-select__input-text">
             </label>
             <label for="phone" class="program-select__label  program-select__label--contact">Телефон:*
-              <input type="tel" id="phone" class="program-select__input">
+              <input type="tel" id="phone" class="program-select__input-text">
             </label>
           </div>
           <div class="program-select__form-group">
             <h2 class="program-select__title-group">Комментарий</h2>
-            <textarea name="comment" id="" cols="30" rows="10">Расскажите обо всех повадках кота</textarea>
+            <textarea class="program-select__textarea" name="comment">Расскажите обо всех повадках кота</textarea>
           </div>
           <div class="program-select__form-group">
             <h2 class="program-select__title-group">Дополнительно</h2>
             <div class="program-select__group-checkbox">
-              <label for="sweetener" class="program-select__label  program-select__label--checkbox">
-                <input type="checkbox" name="sweetener" id="sweetener" class="program-select__input"> Сахарозаменитель
-              </label>
-              <label for="water" class="program-select__label  program-select__label--checkbox">
-                <input type="checkbox" name="water" id="water" class="program-select__input"> Питьевая вода
-              </label>
-              <label for="milk" class="program-select__label  program-select__label--checkbox">
-                <input type="checkbox" name="milk" id="milk" class="program-select__input"> Молоко
-              </label>
-              <label for="vitamins" class="program-select__label  program-select__label--checkbox">
-                <input type="checkbox" name="vitamins" id="vitamins" class="program-select__input"> Витамины
-              </label>
+              <input type="checkbox" name="sweetener" id="sweetener" class="program-select__checkbox">
+              <label for="sweetener" class="program-select__label  program-select__label--checkbox"> Сахарозаменитель</label>
+              <input type="checkbox" name="water" id="water" class="program-select__checkbox">
+              <label for="water" class="program-select__label  program-select__label--checkbox"> Питьевая вода</label>
+              <input type="checkbox" name="milk" id="milk" class="program-select__checkbox">
+              <label for="milk" class="program-select__label  program-select__label--checkbox"> Молоко</label>
+              <input type="checkbox" name="vitamins" id="vitamins" class="program-select__checkbox">
+              <label for="vitamins" class="program-select__label  program-select__label--checkbox"> Витамины</label>
             </div>
           </div>
           <button class="btn program-select__form-submit" type="submit">Отправить заявку</button>
           <p class="program-select__required-fields">* &mdash; Обязательные поля</p>
         </div>
+      </div>
       </form>
       <section class="contacts">
         <div class="contacts__wrapper">
           <b class="contacts__title">Приглашаем к сотрудничеству дилеров!</b>
           <address class="contacts__address">
-            ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+            ул. Большая Конюшенная, д. 19/8 <span class="contacts__city">Санкт-Петербург</span>
           </address>
         </div>
       </section>
@@ -97,7 +93,7 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <a class="logo  page-footer__logo" href="index.html">
-          <span class="logo__title"><b class="logo__cat-bold">CAT</b> ENERGY</span>
+          <img class="logo__img" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
         </a>
         <ul class="social  page-footer__social">
           <li class="social__item">
@@ -116,5 +112,6 @@
         </a>
       </div>
     </footer>
+    <script src="js/index.js"></script>
   </body>
 </html>

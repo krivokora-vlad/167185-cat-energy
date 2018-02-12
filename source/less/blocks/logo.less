@@ -1,14 +1,23 @@
 .logo {
-  /* Временно до SVG */
-  text-decoration: none;
-  color: @main-color-black;
+  display: inline-flex;
+  align-items: center;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 0.6;
+  }
   .logo__img {
-
-  }
-  .logo__title {
-
-  }
-  .logo__cat-bold {
-
+    &--text {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      @media @tablet-widths {
+        position: static;
+        left: auto;
+        transform: none;
+        margin-left: 20px;
+      }
+    }
   }
 }
