@@ -10,12 +10,12 @@
     <header class="page-header  page-header--light">
       <div class="page-header__wrapper  page-header__wrapper--green-cats">
         <a class="logo  page-header__logo">
-          <img class="logo__img">
-          <span class="logo__title"><b class="logo__cat-bold">CAT</b> ENERGY</span>
+          <img class="logo__img  logo__img--icon" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy">
+          <img class="logo__img  logo__img--text" src="img/logo-mobile-header.svg" width="101" height="18" alt="Cat Energy">
         </a>
-        <button class="page-header__btn-menu  page-header__btn-menu--close" type="button">Меню</button>
+        <button class="page-header__btn-menu  page-header__btn-menu--no-js" type="button">Меню</button>
         <ul class="main-menu">
-          <li class="main-menu__item"><a class="main-menu__link  main-menu__link--white">Главная</a></li>
+          <li class="main-menu__item"><a class="main-menu__link  main-menu__link--white  main-menu__link--active">Главная</a></li>
           <li class="main-menu__item"><a class="main-menu__link  main-menu__link--white" href="catalog.html">Каталог продукции</a></li>
           <li class="main-menu__item"><a class="main-menu__link  main-menu__link--white" href="form.html">Подбор программы</a></li>
         </ul>
@@ -24,7 +24,7 @@
         <div class="promo__wrapper">
           <h1 class="promo__title">Функциональное питание для котов</h1>
           <span class="promo__slogan">Занялся собой? Займись котом!</span>
-          <img class="promo__img" src="http://placehold.it/280x270" width="280" height="270" alt="Cat Energy с курицей">
+          <img class="promo__img" src="img/index-can-mobile@1x.png" width="280" height="271" alt="Cat Energy с курицей">
           <a class="promo__btn  btn" href="form.html">Подобрать программу</a>
         </div>
       </div>
@@ -33,14 +33,14 @@
       <section class="variants">
         <div class="variants__wrapper">
           <div class="variants__item">
-            <h3 class="variants__title">Похудение</h3>
-            <p>Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
+            <h3 class="variants__title  variants__title--slim">Похудение</h3>
+            <p class="variants__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
               Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
             <a class="variants__btn-catalog" href="catalog.html/slim">Каталог Slim</a>
           </div>
           <div class="variants__item">
-            <h3 class="variants__title">Набор массы</h3>
-            <p>Заработать авторитет среди дворовых котов и даже собак?
+            <h3 class="variants__title  variants__title--pro">Набор массы</h3>
+            <p class="variants__text">Заработать авторитет среди дворовых котов и даже собак?
               Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
             <a class="variants__btn-catalog" href="catalog.html/pro">Каталог Pro</a>
           </div>
@@ -59,38 +59,44 @@
       </section>
       <section class="live-example">
         <div class="live-example__wrapper">
-          <h2 class="live-example__title">Живой пример</h2>
           <div class="live-example__info">
-            <p class="live-example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-            <table class="live-example__table">
-              <tr class="live-example__row">
-                <td class="live-example__col  live-example__col--value">5 кг</td>
-                <td class="live-example__col  live-example__col--value">60 дней</td>
-              </tr>
-              <tr class="live-example__row">
-                <td class="live-example__col  live-example__col--label">снижение веса</td>
-                <td class="live-example__col  live-example__col--label">затрачено времени</td>
-              </tr>
-            </table>
-            <b class="live-example__food-costs">Затраты на питание: <span class="live-example__costs">15 000 руб.</span></b>
+            <h2 class="live-example__title">Живой пример</h2>
+            <div class="live-example__wrapper-info">
+              <p class="live-example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+              <table class="live-example__table">
+                <tr class="live-example__row">
+                  <td class="live-example__col  live-example__col--value">5 кг</td>
+                  <td class="live-example__col  live-example__col--value">60 дней</td>
+                </tr>
+                <tr class="live-example__row">
+                  <td class="live-example__col  live-example__col--label">снижение веса</td>
+                  <td class="live-example__col  live-example__col--label">затрачено времени</td>
+                </tr>
+              </table>
+              <b class="live-example__food-costs">Затраты на питание: <span class="live-example__costs">15 000 руб.</span></b>
+            </div>
           </div>
           <div class="live-example__slider">
-            <img class="live-example__img" src="http://placehold.it/311x232" alt="Котик" width="311" height="232">
+            <img class="live-example__img" src="http://placehold.it/280x232" alt="Котик" width="280" height="232">
             <div class="live-example__wrapper-toggle">
               <b class="live-example__toggle-label">Было</b>
               <div class="live-example__toggle">
-                <div class="live-example__toggle-control"></div>
+                <input class="live-example__toggle-radio" type="radio" name="toggle" id="toggle-left" checked>
+                <label class="live-example__toggle-control  live-example__toggle-control--left" for="toggle-left"></label>
+                <input class="live-example__toggle-radio" type="radio" name="toggle" id="toggle-right">
+                <label class="live-example__toggle-control  live-example__toggle-control--right" for="toggle-right"></label>
+                <div class="live-example__range-control"></div>
               </div>
               <b class="live-example__toggle-label">Стало</b>
             </div>
           </div>
         </div>
       </section>
-      <section class="contacts">
+      <section class="contacts  contacts--white">
         <div class="contacts__wrapper">
           <b class="contacts__title">Приглашаем к сотрудничеству дилеров!</b>
           <address class="contacts__address">
-            ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+            ул. Большая Конюшенная, д. 19/8 <span class="contacts__city">Санкт-Петербург</span>
           </address>
         </div>
       </section>
@@ -99,7 +105,7 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <a class="logo  page-footer__logo">
-          <span class="logo__title"><b class="logo__cat-bold">CAT</b> ENERGY</span>
+          <img class="logo__img" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
         </a>
         <ul class="social  page-footer__social">
           <li class="social__item">
@@ -118,5 +124,6 @@
         </a>
       </div>
     </footer>
+    <script src="js/index.js"></script>
   </body>
 </html>

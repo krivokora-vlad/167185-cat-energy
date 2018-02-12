@@ -11,9 +11,11 @@
     width: 280px;
     height: 289px;
     background: @main-color-green;
+    position: relative;
     @media @tablet-widths {
       min-width: auto;
       width: 708px;
+      height: 200px;
     }
     @media @desktop-widths {
       min-width: auto;
@@ -29,5 +31,26 @@
     font-weight: 400;
     font-size: 16px;
     color: @main-color-white;
+    display: block;
+    width: 170px;
+    text-align: center;
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    @media @tablet-widths {
+      top: 50%;
+      left: auto;
+      right: 90px;
+      bottom: auto;
+      transform: none;
+      transform: translate(0, -50%);
+    }
+    @media @desktop-widths {
+      top: auto;
+      left: 50%;
+      bottom: 45px;
+      transform: translate(-50%, 0);
+    }
   }
 }
