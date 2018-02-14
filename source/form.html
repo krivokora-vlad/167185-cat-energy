@@ -10,7 +10,11 @@
     <header class="page-header">
       <div class="page-header__wrapper">
         <a class="logo  page-header__logo" href="index.html">
-          <img class="logo__img  logo__img--icon" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="logo__img  logo__img--icon" src="img/icon-logo-mobile.svg" width="33" alt="Логотип Cat Energy">
+          </picture>
           <img class="logo__img  logo__img--text" src="img/logo-mobile-header.svg" width="101" height="18" alt="Cat Energy">
         </a>
         <button class="page-header__btn-menu  page-header__btn-menu--no-js" type="button">Меню</button>
@@ -50,7 +54,9 @@
         </div>
         <div class="program-select__wrapper">
           <div class="program-select__form-group  program-select__form-group--contacts">
-            <h2 class="program-select__title-group">Контактные данные (владельца кота)</h2>
+            <div class="program-select__title-wrapper">
+              <h2 class="program-select__title-group  program-select__title-group--contacts">Контактные данные (владельца кота)</h2>
+            </div>
             <label for="email" class="program-select__label  program-select__label--contact">E&#8209;mail:*
               <input type="email" id="email" class="program-select__input-text">
             </label>
@@ -59,11 +65,15 @@
             </label>
           </div>
           <div class="program-select__form-group">
-            <h2 class="program-select__title-group">Комментарий</h2>
+            <div class="program-select__title-wrapper">
+              <h2 class="program-select__title-group">Комментарий</h2>
+            </div>
             <textarea class="program-select__textarea" name="comment">Расскажите обо всех повадках кота</textarea>
           </div>
           <div class="program-select__form-group">
-            <h2 class="program-select__title-group">Дополнительно</h2>
+            <div class="program-select__title-wrapper">
+              <h2 class="program-select__title-group">Дополнительно</h2>
+            </div>
             <div class="program-select__group-checkbox">
               <input type="checkbox" name="sweetener" id="sweetener" class="program-select__checkbox">
               <label for="sweetener" class="program-select__label  program-select__label--checkbox"> Сахарозаменитель</label>
@@ -88,7 +98,11 @@
           </address>
         </div>
       </section>
-      <img class="map" src="http://placehold.it/320x364" width="320" height="364" alt="Карта">
+      <picture class="map">
+        <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+        <img class="map__img" src="img/bg-map-mobile@1x.png" width="320" height="364" srcset="img/bg-map-mobile@2x.png 2x" alt="Карта">
+      </picture>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">

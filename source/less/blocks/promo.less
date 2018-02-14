@@ -69,14 +69,23 @@
       width: 370px;
     }
   }
-  .promo__img {
-    @media @tablet-widths {
-      order: 10;
-    }
+  .promo__picture {
+    order: 10;
     @media @desktop-widths {
       position: absolute;
       left: 55%;
       transform: translateX(-50%);
+    }
+  }
+  .promo__img {
+    @media @tablet-widths {
+      width: 709px;
+      height: 609px;
+      margin-left: -90px;
+    }
+    @media @desktop-widths {
+      width: 552px;
+      height: 499px;
     }
   }
   .promo__btn {
