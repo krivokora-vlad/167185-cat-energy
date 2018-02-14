@@ -8,15 +8,22 @@
     opacity: 0.6;
   }
   .logo__img {
+    &--icon {
+      @media @tablet-widths {
+        width: 173px;
+        height: 58px;
+      }
+      @media @desktop-widths {
+        width: 202px;
+        height: 59px;
+      }
+    }
     &--text {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
       @media @tablet-widths {
-        position: static;
-        left: auto;
-        transform: none;
-        margin-left: 20px;
+        display: none;
       }
     }
   }

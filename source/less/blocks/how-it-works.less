@@ -39,8 +39,53 @@
     color: @main-color-text;
     min-height: 60px;
     padding-left: 80px;
+    position: relative;
     &:not(:last-child) {
       margin-bottom: 20px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: 0;
+      width: 60px;
+      height: 60px;
+      background-color: @main-color-green;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 50px 50px;
+    }
+    &--leaf {
+      &::before {
+        background-image: url(../img/advantage-leaf@1x.png);
+        @media @retina {
+          background-image: url(../img/advantage-leaf@2x.png);
+        }
+      }
+    }
+    &--powder {
+      &::before {
+        background-image: url(../img/advantage-powder@1x.png);
+        @media @retina {
+          background-image: url(../img/advantage-powder@2x.png);
+        }
+      }
+    }
+    &--dining {
+      &::before {
+        background-image: url(../img/advantage-dining@1x.png);
+        @media @retina {
+          background-image: url(../img/advantage-dining@2x.png);
+        }
+      }
+    }
+    &--clock {
+      &::before {
+        background-image: url(../img/advantage-clock@1x.png);
+        @media @retina {
+          background-image: url(../img/advantage-clock@2x.png);
+        }
+      }
     }
     @media @tablet-widths {
       width: 324px;
@@ -53,11 +98,15 @@
       position: relative;
       margin-top: 90px;
       padding-right: 74px;
+      &::before {
+        width: 80px;
+        height: 80px;
+      }
       &:nth-child(1),
       &:nth-child(2) {
         margin-top: 0;
       }
-      &::before {
+      &::after {
         content: '';
         position: absolute;
         top: 0;
@@ -70,16 +119,16 @@
         z-index: -1;
         font-family: @font;
       }
-      &:nth-child(1)::before {
+      &:nth-child(1)::after {
         content: '1';
       }
-      &:nth-child(2)::before {
+      &:nth-child(2)::after {
         content: '2';
       }
-      &:nth-child(3)::before {
+      &:nth-child(3)::after {
         content: '3';
       }
-      &:nth-child(4)::before {
+      &:nth-child(4)::after {
         content: '4';
       }
     }

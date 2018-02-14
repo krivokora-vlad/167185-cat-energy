@@ -187,10 +187,12 @@
   }
   .live-example__slider {
     padding-bottom: 30px;
+    position: relative;
     @media @tablet-widths {
       .wrapper;
       background: @main-color-grey;
       padding-bottom: 65px;
+      padding-top: 350px;
     }
     @media @desktop-widths {
       padding-bottom: 0;
@@ -200,6 +202,12 @@
     max-width: 100%;
     display: block;
     margin: 10px auto;
+    @media @tablet-widths {
+      position: absolute;
+      top: -170px;
+      width: 677px;
+      height: 499px;
+    }
   }
   .live-example__wrapper-toggle {
     display: flex;

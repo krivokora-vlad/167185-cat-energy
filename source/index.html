@@ -10,7 +10,11 @@
     <header class="page-header  page-header--light">
       <div class="page-header__wrapper  page-header__wrapper--green-cats">
         <a class="logo  page-header__logo">
-          <img class="logo__img  logo__img--icon" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="logo__img  logo__img--icon" src="img/icon-logo-mobile.svg" width="33" alt="Логотип Cat Energy">
+          </picture>
           <img class="logo__img  logo__img--text" src="img/logo-mobile-header.svg" width="101" height="18" alt="Cat Energy">
         </a>
         <button class="page-header__btn-menu  page-header__btn-menu--no-js" type="button">Меню</button>
@@ -24,7 +28,11 @@
         <div class="promo__wrapper">
           <h1 class="promo__title">Функциональное питание для котов</h1>
           <span class="promo__slogan">Занялся собой? Займись котом!</span>
-          <img class="promo__img" src="img/index-can-mobile@1x.png" width="280" height="271" alt="Cat Energy с курицей">
+          <picture class="promo__picture">
+            <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
+            <img class="promo__img" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="271" alt="Cat Energy с курицей">
+          </picture>
           <a class="promo__btn  btn" href="form.html">Подобрать программу</a>
         </div>
       </div>
@@ -50,10 +58,10 @@
         <div class="how-it-works__wrapper">
           <h2 class="how-it-works__title">Как это работает</h2>
           <ul class="how-it-works__list">
-            <li class="how-it-works__item">Функциональное питание содержит только полезные питательные вещества.</li>
-            <li class="how-it-works__item">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
-            <li class="how-it-works__item">Замените один-два приема обычной еды на наше фунцкциональное питание.</li>
-            <li class="how-it-works__item">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
+            <li class="how-it-works__item  how-it-works__item--leaf">Функциональное питание содержит только полезные питательные вещества.</li>
+            <li class="how-it-works__item  how-it-works__item--powder">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
+            <li class="how-it-works__item  how-it-works__item--dining">Замените один-два приема обычной еды на наше фунцкциональное питание.</li>
+            <li class="how-it-works__item  how-it-works__item--clock">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
           </ul>
         </div>
       </section>
@@ -77,7 +85,11 @@
             </div>
           </div>
           <div class="live-example__slider">
-            <img class="live-example__img" src="http://placehold.it/280x232" alt="Котик" width="280" height="232">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+              <img class="live-example__img" src="img/before-mobile@1x.png" width="280" height="232" srcset="img/before-mobile@2x.png 2x" alt="Котик">
+            </picture>
             <div class="live-example__wrapper-toggle">
               <b class="live-example__toggle-label">Было</b>
               <div class="live-example__toggle">
@@ -100,7 +112,11 @@
           </address>
         </div>
       </section>
-      <img class="map" src="http://placehold.it/320x364" width="320" height="364" alt="Карта">
+      <picture class="map">
+        <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+        <img class="map__img" src="img/bg-map-mobile@1x.png" width="320" height="364" srcset="img/bg-map-mobile@2x.png 2x" alt="Карта">
+      </picture>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
