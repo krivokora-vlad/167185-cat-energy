@@ -9,7 +9,8 @@
     width: auto;
   }
   @media @desktop-widths {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    padding-left: 40px;
   }
   .main-menu__item {
     line-height: 65px;
@@ -17,6 +18,11 @@
     z-index: 4;
     @media @tablet-widths {
       margin-right: 35px;
+    }
+    @media @desktop-widths {
+      &:last-child {
+        margin: 0;
+      }
     }
   }
   .main-menu__link {
@@ -52,7 +58,7 @@
         &::before {
           content: '';
           position: absolute;
-          bottom: -5px;
+          bottom: -8px;
           left: 0;
           display: block;
           width: 100%;
@@ -66,6 +72,7 @@
       }
     }
     @media @desktop-widths {
+      font-size: 20px;
       &--active {
         &::before {
           background: @main-color-green;
