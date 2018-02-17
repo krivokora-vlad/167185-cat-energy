@@ -61,7 +61,7 @@
         width: 50px;
         height: 50px;
         left: 10px;
-        background: url('../img/icon-cat-slim.svg') no-repeat;
+        background: url('../img/cat-slim.svg') no-repeat;
       }
     }
     &--pro {
@@ -69,7 +69,7 @@
         width: 67px;
         height: 31px;
         left: -10px;
-        background: url('../img/icon-cat-pro.svg') no-repeat;
+        background: url('../img/cat-pro.svg') no-repeat;
       }
     }
     @media @tablet-widths {
@@ -159,8 +159,22 @@
       height: 11px;
       background: url('../img/icon-right-arrow-long.svg') no-repeat center;
     }
+    &:hover {
+      &::after {
+        right: -44px;
+        width: 33px;
+        height: 11px;
+        background: url('../img/icon-right-arrow-verylong.svg') no-repeat center;
+      }
+    }
     &:active {
       opacity: 0.3;
+      &::after {
+        right: -44px;
+        width: 33px;
+        height: 11px;
+        background: url('../img/icon-right-arrow-verylong.svg') no-repeat center;
+      }
     }
     @media @tablet-widths {
       font-size: 20px;

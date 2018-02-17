@@ -12,7 +12,10 @@
     .wrapper;
     padding-top: 25px;
     height: 305px;
-    background: @main-color-green;
+    background: @main-color-green url('../img/index-background-mobile@1x.jpg') no-repeat center 0;
+    @media @retina {
+      background-image: url('../img/index-background-mobile@2x.jpg');
+    }
     @media @tablet-widths {
       padding-top: 0;
       background: white;
@@ -26,6 +29,7 @@
       margin: 0;
       padding-left: 80px;
       padding-top: 20px;
+      position: relative;
     }
   }
   .promo__title {
@@ -73,7 +77,8 @@
     order: 10;
     @media @desktop-widths {
       position: absolute;
-      left: 55%;
+      top: 22px;
+      left: 771px;
       transform: translateX(-50%);
     }
   }

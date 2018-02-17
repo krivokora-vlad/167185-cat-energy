@@ -29,11 +29,17 @@
           display: block;
           width: 680px;
           height: 696px;
-          background: @main-color-green;
+          background: @main-color-green url('../img/index-background-desktop@1x.jpg') no-repeat center 0;
+        }
+      }
+      @media @retina {
+        &::before {
+          background-image: url('../img/index-background-desktop@2x.jpg');
         }
       }
     }
     @media @desktop-widths {
+      padding-bottom: 5px;
       min-height: 120px;
       align-items: flex-end;
     }

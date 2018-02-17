@@ -12,10 +12,22 @@
   @media @tablet-widths {
     padding: 0;
   }
+  &:active {
+    opacity: 0.3;
+    svg {
+      fill: @main-color-green;
+    }
+  }
   .copyright__name {
 
   }
   .copyright__icon {
+    width: 27px;
+    height: 34px;
+    fill: #666666;
+    &:hover {
+      fill: @main-color-green;
+    }
     @media @tablet-widths {
       margin-left: 20px;
     }

@@ -7,13 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   </head>
   <body>
+    <div style="display: none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="page-header  page-header--light">
       <div class="page-header__wrapper  page-header__wrapper--green-cats">
         <a class="logo  page-header__logo">
           <picture>
             <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img class="logo__img  logo__img--icon" src="img/icon-logo-mobile.svg" width="33" alt="Логотип Cat Energy">
+            <img class="logo__img  logo__img--icon" src="img/logo-mobile.svg" width="33" alt="Логотип Cat Energy">
           </picture>
           <img class="logo__img  logo__img--text" src="img/logo-mobile-header.svg" width="101" height="18" alt="Cat Energy">
         </a>
@@ -29,6 +32,9 @@
           <h1 class="promo__title">Функциональное питание для котов</h1>
           <span class="promo__slogan">Занялся собой? Займись котом!</span>
           <picture class="promo__picture">
+            <source type="image/webp" media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.webp 1x, img/index-can-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/index-can-tablet@1x.webp 1x, img/index-can-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/index-can-mobile@1x.webp 1x, img/index-can-mobile@2x.webp 2x">
             <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
             <img class="promo__img" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="271" alt="Cat Energy с курицей">
@@ -85,15 +91,20 @@
             </div>
           </div>
           <div class="live-example__slider">
-            <picture>
-              <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-              <img class="live-example__img" src="img/before-mobile@1x.png" width="280" height="232" srcset="img/before-mobile@2x.png 2x" alt="Котик">
-            </picture>
+            <div class="live-example__cat  live-example__cat--before">
+              <picture>
+                <source type="image/webp" media="(min-width: 1300px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
+                <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                <img class="live-example__img" src="img/before-mobile@1x.png" width="280" height="232" srcset="img/before-mobile@2x.png 2x" alt="Котик">
+              </picture>
+            </div>
             <div class="live-example__wrapper-toggle">
               <b class="live-example__toggle-label">Было</b>
               <div class="live-example__toggle">
-                <input class="live-example__toggle-radio" type="radio" name="toggle" id="toggle-left" checked>
+                <input class="live-example__toggle-radio" type="radio" name="toggle" id="toggle-left" checked="">
                 <label class="live-example__toggle-control  live-example__toggle-control--left" for="toggle-left"></label>
                 <input class="live-example__toggle-radio" type="radio" name="toggle" id="toggle-right">
                 <label class="live-example__toggle-control  live-example__toggle-control--right" for="toggle-right"></label>
@@ -112,11 +123,9 @@
           </address>
         </div>
       </section>
-      <picture class="map">
-        <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
-        <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
-        <img class="map__img" src="img/bg-map-mobile@1x.png" width="320" height="364" srcset="img/bg-map-mobile@2x.png 2x" alt="Карта">
-      </picture>
+      <div class="map">
+        <iframe class="map__iframe" width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F%20%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F%20%D1%83%D0%BB.%2C%2019%2C%20%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%2C%20191186&key=AIzaSyD2MPmJ3z0bMNdtH-1cX39Zcv3nJo2gtDU" allowfullscreen></iframe>
+      </div>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
@@ -125,18 +134,37 @@
         </a>
         <ul class="social  page-footer__social">
           <li class="social__item">
-            <a class="social__link  social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+            <a class="social__link  social__link--vkontakte" href="https://vk.com/htmlacademy">
+              Мы в Вконтакте
+              <svg class="social__img  social__img--vkontakte" width="22" height="12">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-vk-mobile"></use>
+              </svg>
+            </a>
           </li>
           <li class="social__item">
-            <a class="social__link  social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+            <a class="social__link  social__link--instagram" href="https://www.instagram.com/htmlacademy">
+              Мы в Инстаграме
+              <svg class="social__img  social__img--instagram" width="16" height="16">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-insta-mobile"></use>
+              </svg>
+              </a>
+            </a>
           </li>
           <li class="social__item">
-            <a class="social__link  social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+            <a class="social__link  social__link--facebook" href="https://www.facebook.com/htmlacademy">
+              Мы в Фейсбуке
+              <svg class="social__img  social__img--facebook" width="10" height="19">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-fb-mobile"></use>
+              </svg>
+              </a>
+            </a>
           </li>
         </ul>
         <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="copyright__name">HTML Academy</span>
-          <img class="copyright__icon" src="http://placehold.it/27x34" width="27" height="34" alt="HTML Academy">
+          <svg class="copyright__icon" width="27" height="34">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-htmlacademy"></use>
+          </svg>
         </a>
       </div>
     </footer>
