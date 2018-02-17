@@ -5,17 +5,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 23px 0;
+  padding: 23px 0 14px 0;
   @media @tablet-widths {
     border: none;
     padding: 0;
   }
   .social__item {
     line-height: 12px;
+    width: 22px;
     &:not(:last-child) {
       margin-right: 35px;
-      @media @tablet-widths {
-        margin-right: 28px;
+    }
+    &:nth-child(2) {
+      margin-right: 36px;
+    }
+    @media @tablet-widths {
+      line-height: 28px;
+      height: 28px;
+      width: 30px;
+      &:not(:last-child) {
+        margin-right: 26px;
+      }
+      &:nth-child(2) {
+        margin-right: 21px;
       }
     }
   }
@@ -28,15 +40,6 @@
     &:active {
       fill: @main-color-green;
       opacity: 0.3;
-    }
-    &--vkontakte {
-
-    }
-    &--instagram {
-
-    }
-    &--facebook {
-
     }
   }
   .social__img {

@@ -2,11 +2,31 @@
   display: block;
   margin: 0 auto;
   width: 100%;
+  background: #f9f3ef;
   @media @desktop-widths {
     margin-top: -201px;
   }
   &__iframe {
+    background: #f9f3ef;
     width: 100%;
     margin-bottom: -2px;
+    display: none;
+    &--show {
+      display: block;
+    }
+    @media @tablet-widths {
+      height: 400px;
+    }
+  }
+  &__img {
+    background: #f9f3ef;
+    width: 100%;
+    display: block;
+    &--hide{
+      display: none;
+    }
+    @media @tablet-widths {
+      height: 400px;
+    }
   }
 }

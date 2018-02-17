@@ -19,7 +19,13 @@
     }
   }
   .copyright__name {
-
+    margin-bottom: 4px;
+    @media @tablet-widths {
+      margin-bottom: -7px;
+    }
+    @media @desktop-widths {
+      margin-top: -7px;
+    }
   }
   .copyright__icon {
     width: 27px;
@@ -29,7 +35,11 @@
       fill: @main-color-green;
     }
     @media @tablet-widths {
+      margin-top: 9px;
       margin-left: 20px;
+    }
+    @media @desktop-widths {
+      margin-top: 0;
     }
   }
 }

@@ -1,10 +1,14 @@
 .how-it-works {
-  padding-bottom: 42px;
+  padding-top: 18px;
+  padding-bottom: 40px;
   @media @tablet-widths {
+    padding-top: 47px;
+    padding-bottom: 34px;
     border-bottom: 1px solid #e6e6e6;
   }
   @media @desktop-widths {
-    padding-bottom: 210px;
+    padding-top: 75px;
+    padding-bottom: 191px;
     border: none;
   }
   .how-it-works__wrapper {
@@ -16,7 +20,9 @@
     font-size: 36px;
     line-height: 60px;
     color: @main-color-black;
+    margin-top: 0;
     @media @tablet-widths {
+      margin-bottom: 74px;
       font-size: 60px;
     }
   }
@@ -92,12 +98,11 @@
       font-size: 16px;
       line-height: 24px;
       padding-left: 0;
-      padding-right: 75px;
-      padding-top: 115px;
       min-height: 230px;
       position: relative;
-      margin-top: 90px;
+      margin-top: 67px;
       padding-right: 74px;
+      padding-top: 108px;
       &::before {
         width: 80px;
         height: 80px;
@@ -109,8 +114,8 @@
       &::after {
         content: '';
         position: absolute;
-        top: 0;
-        left: 50%;
+        top: -16px;
+        left: 53%;
         transform: translateX(-50%);
         display: block;
         font-size: 281px;
@@ -121,21 +126,40 @@
       }
       &:nth-child(1)::after {
         content: '1';
+        left: 53%;
       }
       &:nth-child(2)::after {
         content: '2';
+        left: 55%;
       }
       &:nth-child(3)::after {
         content: '3';
+        left: 55%;
       }
       &:nth-child(4)::after {
         content: '4';
+        left: 56%;
       }
     }
     @media @desktop-widths {
       width: 245px;
       margin-top: 0;
       padding-right: 0;
+      &::after {
+        left: 70%;
+      }
+      &:nth-child(1)::after {
+        left: 70%;
+      }
+      &:nth-child(2)::after {
+        left: 73%;
+      }
+      &:nth-child(3)::after {
+        left: 73%;
+      }
+      &:nth-child(4)::after {
+        left: 73%;
+      }
     }
   }
 }
