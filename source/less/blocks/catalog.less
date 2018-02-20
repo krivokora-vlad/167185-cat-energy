@@ -40,6 +40,9 @@
       flex-wrap: wrap;
       justify-content: space-between;
     }
+    @media @desktop-widths {
+      justify-content: flex-start;
+    }
   }
   .catalog__item {
     display: flex;
@@ -67,7 +70,9 @@
     @media @desktop-widths {
       width: 245px;
       margin-left: 0;
-      margin-right: 0;
+      &:not(:nth-of-type(4n)) {
+        margin-right: 79px;
+      }
     }
     &--show-more {
       border-left: none;
@@ -138,7 +143,7 @@
     @media @tablet-widths {
       margin: 0 auto;
       margin-bottom: 19px;
-      width: 130px;
+      width: 140px;
       font-size: 20px;
       text-align: center;
     }

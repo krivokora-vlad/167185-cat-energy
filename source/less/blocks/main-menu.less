@@ -6,11 +6,17 @@
   }
   @media @tablet-widths {
     display: flex;
+    flex-wrap: wrap;
     width: auto;
+    max-width: 477px;
+    width: 100%;
+    padding-top: 15px;
   }
   @media @desktop-widths {
-    margin-bottom: 15px;
-    padding-left: 40px;
+    max-width: 522px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    padding-top: 20px;
   }
   .main-menu__item {
     line-height: 65px;
@@ -18,13 +24,7 @@
     z-index: 4;
     @media @tablet-widths {
       margin-left: 35px;
-    }
-    @media @desktop-widths {
-      margin-left: 0;
-      margin-right: 35px;
-      &:last-child {
-        margin: 0;
-      }
+      height: 41px;
     }
   }
   .main-menu__link {

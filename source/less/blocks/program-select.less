@@ -204,6 +204,9 @@
       }
       @media @desktop-widths {
         width: 20%;
+        &:not(:nth-of-type(4n)) {
+          margin-right: 80px;
+        }
       }
       &::before {
         content: '';
@@ -431,6 +434,7 @@
       margin-top: 27px;
     }
     @media @desktop-widths {
+      justify-content: flex-start;
       margin-top: -8px;
       position: relative;
       z-index: 2;

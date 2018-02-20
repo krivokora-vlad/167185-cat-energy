@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
     <link rel="stylesheet" href="css/style.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   </head>
@@ -144,7 +146,7 @@
           <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
           <img class="map__img" src="img/bg-map-mobile@1x.png" width="320" height="361" srcset="img/bg-map-mobile@2x.png 2x" alt="Котик">
         </picture>
-        <iframe class="map__iframe" width="600" height="361" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F%20%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F%20%D1%83%D0%BB.%2C%2019%2C%20%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%2C%20191186&key=AIzaSyD2MPmJ3z0bMNdtH-1cX39Zcv3nJo2gtDU" allowfullscreen></iframe>
+        <iframe class="map__iframe" width="600" height="361" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F%20%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F%20%D1%83%D0%BB.%2C%2019%2C%20%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%2C%20191186&key=AIzaSyD2MPmJ3z0bMNdtH-1cX39Zcv3nJo2gtDU" allowfullscreen></iframe>
       </div>
     </main>
     <footer class="page-footer">
@@ -187,5 +189,7 @@
       </div>
     </footer>
     <script src="js/index.js"></script>
+    <script src="js/picturefill.js"></script>
+    <script src="js/svgxuse.js"></script>
   </body>
 </html>
