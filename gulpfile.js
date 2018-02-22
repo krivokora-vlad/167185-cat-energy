@@ -15,6 +15,8 @@ var posthtml = require('gulp-posthtml'); // для того, чтобы вста
 var include = require('posthtml-include'); // плагин для posthtml - заменяет кастомный тег на содержимое из src файла
 var run = require('run-sequence'); // последовательное выполнение gulp тасков
 var del = require('del'); //удаляет файлы и папки
+var htmlmin = require('gulp-htmlmin'); //минификация html
+var uglify = require('gulp-uglify'); //минификация js
 
 gulp.task('clean', function() {
   return del('build');
@@ -62,6 +64,7 @@ gulp.task('html', function() {
     .pipe(posthtml([
       include()
     ]))
+    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('build'));
 });
 
@@ -73,6 +76,14 @@ gulp.task('images', function() {
       imagemin.svgo()
     ]))
     .pipe(gulp.dest('source/img'));
+});
+
+gulp.task('js', function() {
+  return gulp.src('source/js/**/*.js', {
+      base: 'source'
+    })
+    .pipe(uglify())
+    .pipe(gulp.dest('build/'))
 });
 
 gulp.task('webp', function() {
@@ -93,5 +104,5 @@ gulp.task('sprite', function() {
 });
 
 gulp.task('build', function(done) {
-  run('clean', 'copy', 'style', 'sprite', 'html', done);
+  run('clean', 'copy', 'style', 'sprite', 'html', 'js', done);
 });
